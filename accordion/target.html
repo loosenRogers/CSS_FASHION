@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3手风琴的两种制作方案-1(:target)</title>
+	<style>
+		.menu  li ul{
+			line-height:30px;
+			display:none;
+			overflow:hidden;
+			-webkit-transition:opacity 3s linear;
+			-moz-transition:opacity 3s linear;
+			transition:opacity 3s linear;
+		}
+		.menu li:target ul{
+			display:block;
+			border-top:1px solid #3d3d3d;
+			box-shadow:0 1px 0 #888 inset;
+			-webkit-animation:fadeIn 2s linear;
+		}
+		/*display属性使用transition渐变无效*/
+		@-webkit-keyframes fadeIn{
+			0%{
+				opacity: 0;
+			}
+			100%{
+				opacity: 1;
+			}
+		}
+	</style>
+</head>
+<body>
+	<section class="menu">
+	<ul>
+
+	<li id="one"><a href="#one">我的朋友 </a>
+	<ul>
+	<li><a href="#">Cute Kittens </a></li>
+	<li><a href="#">Strange “Stuff” </a></li>
+	<li><a href="#">Automatic Fails </a></li>
+	<li><a href="#">Cute Kittens </a></li>
+	<li><a href="#">Strange “Stuff” </a></li>
+	<li><a href="#">Automatic Fails </a></li>
+	</ul>
+	</li>
+
+	<li id="two"><a href="#two">我的邻居</a>
+	<ul>
+	<li><a href="#">Cute Kittens </a></li>
+	<li><a href="#">Strange “Stuff” </a></li>
+	<li><a href="#">Automatic Fails </a></li>
+	<li><a href="#">Strange “Stuff” </a></li>
+	<li><a href="#">Cute Kittens </a></li>
+	<li><a href="#">Strange “Stuff” </a></li>
+	</ul>
+	</li>
+
+	<li id="three"><a href="#three">我的应用</a>
+	<ul>
+	<li><a href="#">Automatic Fails</a></li>
+	</ul>
+	</li>
+
+	<li id="five"><a href="#five">我的机器</a>
+	<ul>
+	<li><a href="#">Cute Kittens</a></li>
+	<li><a href="#">Strange “Stuff”</a></li>
+	<li><a href="#">Automatic Fails </a></li>
+	</ul>
+	</li>
+
+	</ul>
+	</section>
+</body>
+</html>

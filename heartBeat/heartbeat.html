@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>心跳</title>
+	<style>
+	html,body{
+		margin: 0px;
+		padding: 0px;
+		height: 100%;
+	}
+	/*居中设置*/
+	body{
+	    display: flex;
+	    align-items: center; /*定义body的元素垂直居中*/
+	    justify-content: center; /*定义body的里的元素水平居中*/
+	}
+	.heart{
+		width: 300px;
+		height: 300px;
+		/*动画设置*/
+		-webkit-animation:bang 1s infinite;
+	}
+	/*动画定义*/
+	@-webkit-keyframes bang{
+		0%{
+			transform:scale(1);
+		}
+		100%{
+			transform:scale(1.2);
+		}
+	}
+	</style>
+</head>
+<body>
+	<div class="heart">
+		<img src="heart.svg" alt="heart">
+	</div>
+</body>
+</html>
